@@ -3,6 +3,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import ParallaxProjectHolder from './components/ParallaxProjectHolder';
 import BackgroundTitle from './components/BackgroundTitle';
 import { useState, useEffect } from "react";
+import About from './components/About';
 
 
 function App() {
@@ -36,9 +37,7 @@ function App() {
           <ParallaxProjectHolder start='0' end='275' inset='30vh auto auto 2vw' bg='ghostwhite' size='140px'/>
         </Page>
         <Page>
-
-          <p style={{color: 'white'}}>Listen bud im not sure what's going on here.</p>
-
+          <About />
         </Page>
       </ParallaxProvider>
     </div>
