@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledPage = styled.div`
-    border: 4px solid black;
+    /* border: 4px solid black; */
     display: flex;
     align-items: center;
     justify-content: center;
