@@ -4,14 +4,22 @@ import styled from 'styled-components';
 const StyledProjectHolder = styled.div`
     width: 100px;
     height: 100px;
-    background-color: blue;
+    background-color: ${props => props.bg || 'red'};
 `;
 
-const ParallaxProjectHolder = ({start, end}) => {
+
+const StyledPHolder = styled.div`
+    position: absolute;
+    inset: ${props => props.inset};
+`;
+
+const ParallaxProjectHolder = ({start, end, inset, bg}) => {
   return (
-    <Parallax translateY={[start, end]}>
-        <StyledProjectHolder />
-    </Parallax>
+    <StyledPHolder inset={inset}>
+        <Parallax translateY={[start, end]}>
+            <StyledProjectHolder bg={bg} />
+        </Parallax>
+    </StyledPHolder>
   )
 }
 

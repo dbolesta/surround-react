@@ -8,9 +8,9 @@ function App() {
     <div className="App">
       <ParallaxProvider>
         <Page>
-          <ParallaxProjectHolder start='200px' end='-200px' />
-          <ParallaxProjectHolder start='100px' end='-400px' />
-          <ParallaxProjectHolder start='50px' end='200px' />
+          <ParallaxProjectHolder start='0' end='-10' inset='20vh 10vw auto auto' bg='red'/>
+          <ParallaxProjectHolder start='0' end='-400' inset='auto auto 0 48vw' bg='blue'/>
+          <ParallaxProjectHolder start='0' end='200' inset='auto auto 0 0' bg='green'/>
         </Page>
         <Page />
         <Page />
