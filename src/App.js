@@ -2,13 +2,28 @@ import Page from './components/Page';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import ParallaxProjectHolder from './components/ParallaxProjectHolder';
 import BackgroundTitle from './components/BackgroundTitle';
+import { useState, useEffect } from "react";
 
 
 function App() {
+  const [scroll, setScroll] = useState(0);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY < 1500
+      if (scrollCheck !== scroll) {
+        setScroll(scrollCheck)
+      }
+    })
+  });
+
+
+
+
   return (
     <div className="App">
       <ParallaxProvider>
-        <BackgroundTitle />
+        <BackgroundTitle scroll={scroll}/>
         <Page>
           <ParallaxProjectHolder start='0' end='-10' inset='20vh 10vw auto auto' bg='red' size='145px'/>
           <ParallaxProjectHolder start='0' end='-400' inset='auto auto -15vh 48vw' bg='blue' size='205px'/>

@@ -18,10 +18,25 @@ const StyledTitle = styled.h1`
     color: #e5e5e5;
 `;
 
-const BackgroundTitle = () => {
+const StyledTopTitle = styled.h1`
+    font-size: 4vw;
+    font-family: 'Lexend Deca', sans-serif;
+    color: #e5e5e5;
+    position: absolute;
+    top: 15px;
+    margin: auto;
+    text-align: center;
+`;
+
+const BackgroundTitle = ({scroll}) => {
   return (
     <StyledBGHolder>
-        <StyledTitle>SRND Studios</StyledTitle>
+        {scroll ? 
+            <StyledTitle>SRND Studios</StyledTitle>
+            :
+            <StyledTopTitle>SRND Studios</StyledTopTitle> 
+        }
+
     </StyledBGHolder>
   )
 }
