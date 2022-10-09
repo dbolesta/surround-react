@@ -3,10 +3,16 @@ import styled from 'styled-components';
 const AboutTextContainer = styled.div`
     margin: 5rem;
     font-family: 'Lexend Deca', sans-serif;
-    font-size: 2vw;
+    font-size: 2rem;
     color: #e5e5e5;
     max-width: 1200px;
+    width: 100%;
     text-align: center;
+    padding: 2rem;
+
+    @media (max-width: 740px) {
+        font-size: 1rem;
+    }
 `;
 
 const StyledWorkSelectorContainer = styled.div`
@@ -26,6 +32,11 @@ const StyledWorkSelectorContainer = styled.div`
         &:hover {
             background-color: #e5e5e5;
             color: #141414;
+        }
+
+        @media (max-width: 740px) {
+            font-size: 0.75rem;
+            border: 2px solid #e5e5e5;
         }
     }
 `;
