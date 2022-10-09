@@ -10,9 +10,9 @@ const AboutTextContainer = styled.div`
 `;
 
 
-const About = () => {
+const About = ({innerRef}) => {
   return (
-    <AboutTextContainer>
+    <AboutTextContainer ref={innerRef}>
         <p>Our in-house post production and visual effects facility is used to push the boundaries of creativity through conceptual thinking and inventive techniques. It's in our post process where we use technology and talent to raise questions, design solutions and shape the answers that manifest our initial ideas.</p>
     </AboutTextContainer>
   )

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledBGHolder = styled.div`
-    background-color: #141414;
+    /* background-color: #141414; */
     position: fixed;
     top: 0;
     left: 0;
@@ -28,10 +28,10 @@ const StyledTopTitle = styled.h1`
     text-align: center;
 `;
 
-const BackgroundTitle = ({scroll}) => {
+const BackgroundTitle = ({onScreen}) => {
   return (
     <StyledBGHolder>
-        {scroll ? 
+        {!onScreen ? 
             <StyledTitle>SRND Studios</StyledTitle>
             :
             <StyledTopTitle>SRND Studios</StyledTopTitle> 
