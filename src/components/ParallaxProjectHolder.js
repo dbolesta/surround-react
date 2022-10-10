@@ -13,12 +13,20 @@ const StyledPHolder = styled.div`
     inset: ${props => props.inset};
 `;
 
+const StyledProjectImg = styled.img`
+    width: ${props => props.size}vw;
+
+    @media (max-width: 740px) {
+        width: ${props => props.size * 1.75}vw;
+    }
+`;
+
 const ParallaxProjectHolder = ({start, end, inset, bg, size, img}) => {
   return (
     <StyledPHolder inset={inset}>
         <Parallax translateY={[start, end]}>
             {img ? 
-                <img alt='projImg' src={img} style={{width: size}} /> 
+                <StyledProjectImg src={img} size={size}/>
                 : 
                 <StyledProjectHolder bg={bg} size={size}/>
             }
