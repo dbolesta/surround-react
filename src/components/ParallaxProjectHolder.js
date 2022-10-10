@@ -18,7 +18,7 @@ const ParallaxProjectHolder = ({start, end, inset, bg, size, img}) => {
     <StyledPHolder inset={inset}>
         <Parallax translateY={[start, end]}>
             {img ? 
-                <img alt='projImg' src={img} style={{maxWidth: size, maxHeight: size}} /> 
+                <img alt='projImg' src={img} style={{width: size}} /> 
                 : 
                 <StyledProjectHolder bg={bg} size={size}/>
             }

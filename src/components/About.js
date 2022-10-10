@@ -35,7 +35,7 @@ const StyledWorkSelectorContainer = styled.div`
         }
 
         @media (max-width: 740px) {
-            font-size: 0.75rem;
+            font-size: 1.25rem;
             border: 2px solid #e5e5e5;
         }
     }
@@ -47,7 +47,7 @@ const About = ({innerRef}) => {
         <p>Our in-house post production and visual effects facility is used to push the boundaries of creativity through conceptual thinking and inventive techniques. It's in our post process where we use technology and talent to raise questions, design solutions and shape the answers that manifest our initial ideas.</p>
 
         <StyledWorkSelectorContainer>
-            <span>Music Videos</span>
+            <span>Music</span>
             <span>Commercial</span>
         </StyledWorkSelectorContainer>
     </AboutTextContainer>
